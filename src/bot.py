@@ -18,7 +18,7 @@ class CovINDBot:
         while True:
             try:
                 self.check_mentions()
-                logger.info(self.last_id)
+                logger.debug(self.last_id)
                 time.sleep(Config.timeout.value)
             except Exception as exc:
                 logger.error(exc)
@@ -64,7 +64,8 @@ class CovINDBot:
                 message = Message.already_retweeted.value.format(username)
             if not username:
                 continue  # If username is not present, reply doesn't work
-            self.reply_to_mention(tweet.id, message)  # Reply to the mention
+            # Do not reply as it populates the timeline
+            # self.reply_to_mention(tweet.id, message)  # Reply to the mention
 
     # Reply to a tweet
     def reply_to_mention(self, reply_id: str, text: str) -> None:
