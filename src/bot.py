@@ -11,7 +11,6 @@ class CovINDBot:
         self.twitter_api = None
         self.last_id = 1
         self.bot_setup(config_file)
-        self.run_bot()
 
     # Continously run the bot
     def run_bot(self) -> None:

@@ -1,5 +1,8 @@
 from configparser import RawConfigParser
+import logging
 from src.bot import CovINDBot
+
+logger = logging.getLogger()
 
 raw_config_parser = RawConfigParser()
 raw_config_parser.read("secret.ini")
@@ -18,3 +21,9 @@ config_file = {
 
 if __name__ == "__main__":
     cov_ind_bot = CovINDBot(config_file)
+
+    while True:
+        try:
+            cov_ind_bot.run_bot()
+        except Exception as e:
+            logger.error(e)
