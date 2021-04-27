@@ -2,7 +2,7 @@ import enum
 
 
 class Config(enum.Enum):
-    timeout = 5  # 5 second timeout
+    timeout = 30  # 30 second timeout
 
 
 class Message(enum.Enum):
