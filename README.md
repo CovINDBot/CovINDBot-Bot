@@ -2,19 +2,19 @@
 
 ### Installation
 
-```
+```sh
 git clone https://github.com/CovINDBot/CovINDBot-Bot.git
 cd CovINDBot-Bot/
 python3 -m venv env
-source env/bin/activate
-pip3 install -r requirements.txt
+source env/bin/activate # Activate virtual environment. You can also use virtualenv
+pip3 install -r requirements.txt # For dev installation, use pip3 install -r dev.requirements.txt
 ```
 
 Create secret.ini file from example.secret.ini
 
 To run the bot
 
-```
+```sh
 python3 main.py
 ```
 
